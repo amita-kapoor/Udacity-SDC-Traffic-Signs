@@ -185,17 +185,24 @@ If an iterative approach was chosen:
 Here are five German traffic signs that I found on the web:
 
 ![alt text][image4] 
-This image is the image of stop sign. While the sign itself is very clear and should not be difficult to classify.
-![alt text][image5] 
-This image is of Slippery road, the image has lot of watermarks on it, and might be difficult to classify on account of it.
-![alt text][image6] 
-This is the image of Road Work, the sign has few signs of wear and tear, but I think network can classify it easily.
-![alt text][image7] 
-This is the image of speed limit, unlike most training samples the board on which the sign id rectangular not round, this may cause mis-classification.
-![alt text][image8]
-This is the image of Go straight or right sign. It is quite clear and should be easy to guess.
 
-The image  second image might be difficult to classify because it contains watermark signs.
+This image is the image of stop sign. While the sign itself is very clear and should not be difficult to classify.
+
+![alt text][image5] 
+
+This image is of Slippery road, the image has lot of watermarks on it, and might be difficult to classify on account of it.
+
+![alt text][image6] 
+
+This is the image of Road Work, the sign has few signs of wear and tear, but I think network can classify it easily.
+
+![alt text][image7] 
+
+This is the image of speed limit, unlike most training samples the board on which the sign id rectangular not round, this may cause mis-classification.
+
+![alt text][image8]
+
+This is the image of Go straight or right sign. It is quite clear and should be easy to guess.
 
 #### 2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
