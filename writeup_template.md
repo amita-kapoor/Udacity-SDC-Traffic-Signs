@@ -36,7 +36,7 @@ The goals / steps of this project are the following:
 
 #### 1. Provide a Writeup / README that includes all the rubric points and how you addressed each one. You can submit your writeup as markdown or pdf. You can use this template as a guide for writing the report. The submission includes the project code.
 
-You're reading it! and here is a link to my [project code](https://github.com/udacity/CarND-Traffic-Sign-Classifier-Project/blob/master/Traffic_Sign_Classifier.ipynb)
+You're reading it! and here is a link to my [project code](https://github.com/amita-kapoor/Udacity-SDC-Traffic-Signs/blob/master/Traffic_Sign_Classifier.ipynb)
 
 ### Data Set Summary & Exploration
 
@@ -59,10 +59,10 @@ signs data set:
 #### 2. Include an exploratory visualization of the dataset.
 
 Here is an exploratory visualization of the data set, different traffic sign images along with the sign name. 
-![alt text](original_dataset.png)
+![alt text](/test_images/original_dataset.png)
 
 Here you can also see the bar chart showing how the data is distributed among different classes.
-![bar_chart](bar_chart1.png)
+![bar_chart](/test_images/bar_chart1.png)
 
 
 ### Design and Test a Model Architecture
@@ -103,16 +103,16 @@ class ImagePreProcess(object):
 '''
 Here is an example of a traffic sign images after preprocessing
 
-![alt text](preprocess_dataset.png)
+![alt text](/test_images/preprocess_dataset.png)
 
 Intially I experimented without data Augmenation, but there was only 92% accuracy from the LeNet model. Therefore I decided to augment the dataset. I performed only two augmentation tasks, viz: shift and rotate. As the car moves through the road, there is a chance that traffic signs shift there position and may appear rotated. This is not an exhaustive list, many more things can happen, but for now I restricted myself to these two.
 
 Below you can see the augmented images
 
-![alt text](augment_dataset.png)
+![alt text](/test_images/augment_dataset.png)
 
 Adding the augmented dataset to training dataset I now had 64799 images. Here you can see the bar chart of the distribution of the augmented dataset.
-![alt_text](bar_chart2.png)
+![alt_text](/test_images/bar_chart2.png)
 
 
 #### 2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
@@ -143,7 +143,7 @@ The Architecture of LeNet used is:
 |						|												|
  
 And in the modified MultiScale CNN the output of the second convolutional layer is fed alongwith the output of the third convolutional layer. From the paper the architecture of this model is:
-![Lenet2](lenet_modified.png)
+![Lenet2](/test_images/lenet_modified.png)
 
 #### 3. Describe how you trained your model. The discussion can include the type of optimizer, the batch size, number of epochs and any hyperparameters such as learning rate.
 
@@ -172,9 +172,9 @@ My final model results were:
 In my intial attempts LeNet was showing overfitting, to take care of that I added dropout layers. I had to tune droput layers `keep_prob` parameter, I tried various values ranging from 0.2-0.7, finally chose 0.7.
 If an iterative approach was chosen:
  Each convolution layer extracts a feature from the data, we can see from the feature map that the first Convolutional layer is extracting the basic shape of the traffic sign, and the second Convolutional layer some abstract information.
- ![original_sign](original_sign.png)
- ![conv1_feature_map](conv1_feature_map.png)
- ![conv2_feature_map](conv2_feature_map.png)
+ ![original_sign](/test_images/original_sign.png)
+ ![conv1_feature_map](/test_images/conv1_feature_map.png)
+ ![conv2_feature_map](/test_images/conv2_feature_map.png)
 
 
 
@@ -269,14 +269,14 @@ For the fifth image, the model is relatively sure that this is a **Go straight o
 | 1.8e-28          	    | Go straight or left		            		|
 
 Below you can see the input image and the top 3 guesses in image format
-![top_3](top_3.png)
+![top_3](/test_images/top_3.png)
 
 
 ### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
 #### 1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
 Input image
-![input](input.png)
+![input](/test_images/input.png)
 The first convolutional layer has six filters, we can see that the first convolutional layers has learned the basic shapes in the input image like triangle, circle, and even numbers.
-![conv1](conv1.png)
+![conv1](/test_images/conv1.png)
 The second convolutional layer has sixteen filters, we can see that this layer has learned a complex abstract information about the input.
-![conv2](conv2.png)
+![conv2](/test_images/conv2.png)
